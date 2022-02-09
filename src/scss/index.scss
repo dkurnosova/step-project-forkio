@@ -1,0 +1,15 @@
+@import './helpers/reset';
+@import './helpers/variables';
+@import './helpers/mixins';
+
+*{
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+@import './sections/main';
