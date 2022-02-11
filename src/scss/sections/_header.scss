@@ -1,0 +1,167 @@
+.header {
+  position: relative;
+  background: url(../img/hero-bckg-img.png) no-repeat center center;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  min-width: 320px;
+
+  &__title {
+    margin-top: 112px;
+    font-weight: bold;
+    font-size: rem(82);
+    color: $whiteColor;
+  }
+
+  &__subtitle {
+    margin-top: 19px;
+    font-family: $latoFont;
+    font-size: rem(30);
+    color: $purpleColor;
+  }
+
+  &__description {
+    margin-top: 19px;
+    text-transform: uppercase;
+    color: $greyColor;
+  }
+}
+
+.top-menu {
+  @include flex(space-between);
+  column-gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.logo {
+  display: flex;
+  column-gap: 17px;
+  flex-grow: 1;
+  align-items: center;
+  color: $purpleColor;
+
+  &__title {
+    font-family: Lato;
+    font-weight: bold;
+    font-size: rem(24);
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.menu {
+  @include flex();
+  column-gap: 48px;
+
+  &__item {
+    color: $purpleColor;
+    font-weight: bold;
+    line-height: 17px;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.button {
+  background: #8D81AC;
+  border-radius: 40px;
+  color: $whiteColor;
+  padding-block: 11px;
+  font-weight: bold;
+  line-height: 17px;
+  width: 145px;
+  text-align: center;
+
+  &--download {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 390px;
+    padding-block: 23px;
+    transform: translate(-50%, 50%);
+    font-size: rem(21);
+    line-height: rem(22);
+  }
+}
+
+@media (max-width: 992px) {
+  .header.container {
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 10px #27262A;
+  }
+  .top-menu {
+    row-gap: 22px;
+    background: #27262A;
+  }
+  .menu {
+    order: 1;
+    flex-basis: 100%;
+    padding-bottom: 18px;
+  }
+  .header {
+
+    &__title {
+      margin-top: 69px;
+      font-size: rem(72);
+    }
+
+    &__subtitle {
+      font-size: rem(24);
+    }
+
+    &__description {
+      font-size: rem(14);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .top-menu {
+    padding-bottom: 30px;
+  }
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    align-items: end;
+  }
+  .logo {
+    flex-grow: 0;
+
+    &__title {
+      display: none;
+    }
+  }
+  .header {
+    height: 718px;
+
+    &__title {
+      margin-top: 50px;
+      font-size: rem(48);
+    }
+
+    &__subtitle {
+      font-family: $montserratFont;
+      font-size: rem(18);
+      line-height: rem(24);
+      padding-inline: 5px;
+    }
+  }
+  .button {
+    font-size: rem(15);
+    width: 120px;
+
+    &--download {
+      font-size: rem(18);
+      line-height: rem(20);
+      padding-block: 15px;
+      width: 290px;
+    }
+  }
+}
