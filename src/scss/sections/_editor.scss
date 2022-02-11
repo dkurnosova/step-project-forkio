@@ -1,11 +1,11 @@
 .editor-section{
-    margin-top: rem(129);
+    padding-top: rem(129);
+    padding-bottom: rem(70);
 
     &__title{
         font-family: $main-font;
         font-weight: bold;
         font-size: rem(54);
-        line-height: rem(54);
         text-transform: uppercase;
         color: #635C73;
         text-align: center;
@@ -29,7 +29,90 @@
 }
 
 .btn-wrapper{
-    
+    font-family: $main-font;
+    @include flex;
+    border: 1px solid rgba(27, 31, 36, 0.15);
+    border-radius: 6px;
+    height: rem(26);
+    background-color: #F2F2F2;
+    padding-left: 10px;
+    font-size: 9px;
+    font-weight: bold;
+
+    button{
+        border: none;
+        border-radius: 6px;
+        @include flex;
+        cursor: pointer;
+      
+        svg{
+            fill: #333333;
+        }
+
+        div{
+            padding-left: 3px;
+            padding-right: 10px;
+            color: #333333;
+        }
+    }
+
+    span{
+        height: 100%;
+        line-height: rem(25);
+        border-left: 1px solid rgba(27, 31, 36, 0.15);
+        border-radius: 6px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: #fff;
+        font-size: 8px;
+        padding-left: 7px;
+        padding-right: 8px;
+    }
+
+}
+
+@media (max-width: 992px){
+    .editor-section{
+        padding-top: rem(158);
+        padding-bottom: rem(98);
+
+        &__title{
+            font-size: rem(42);
+            margin-bottom: rem(33);
+        }
+
+        &__text{
+            max-width: rem(689);
+            margin: 0 auto rem(24);
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .editor-section{
+        padding-top: rem(130);
+        padding-bottom: rem(88);
+
+        &__title{
+            font-size: rem(26);
+            line-height: rem(28);
+            margin-bottom: rem(27);
+        }
+
+        &__text{
+            font-size: rem(14);
+            line-height: rem(20);
+            max-width: rem(276);
+            margin: 0 auto rem(36);
+        }
+
+        &__wrapper{
+            margin: 0 auto;
+            max-width: rem(251);
+            @include flex;
+            flex-wrap: wrap;
+        }
+    }
 }
 
 
