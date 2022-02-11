@@ -11,5 +11,18 @@ a {
     color: #000000;
 }
 
+body {
+    font-family: $montserratFont;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 10px;
+    @media (max-width: 480px) {
+        min-width: 320px;
+    }
+}
+
 
 @import './sections/main';
