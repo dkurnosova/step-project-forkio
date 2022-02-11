@@ -48,6 +48,7 @@
     line-height: 16px;
     text-transform: uppercase;
   }
+
   &__img-hover {
     display: none;
   }
@@ -104,6 +105,7 @@
 .header .logo:hover .logo__img {
   display: none;
 }
+
 .header .logo:hover .logo__img-hover {
   display: block;
 }
@@ -151,15 +153,37 @@
   .top-menu {
     padding-bottom: 30px;
     justify-content: space-between;
+    position: relative;
   }
   .menu {
     display: none;
+    position: absolute;
+    flex-direction: column;
+    align-content: flex-start;
+    top: 102px;
+    left:13px;
+    right: 15px;
+    background: #333333;
+
+    &__item {
+      position: relative;
+      font-size: rem(26);
+      font-weight: normal;
+      color: #FFFFFF;
+      padding-left: 39px;
+      padding-block: 38px 29px;
+      border-bottom: 3px solid #3b3b3b;
+      cursor: pointer;
+      width: 100%;
+      text-align: start;
+    }
   }
   .burger {
     display: flex;
     flex-direction: column;
     row-gap: 6px;
     align-items: end;
+    cursor: pointer;
   }
   .logo {
     margin-right: unset;
@@ -194,4 +218,9 @@
       width: 290px;
     }
   }
+}
+
+.menu.active {
+  display: flex;
+  pointer-events: all;
 }
