@@ -28,7 +28,7 @@
 }
 
 .top-menu {
-  @include flex(space-between);
+  @include flex();
   column-gap: 48px;
   flex-wrap: wrap;
   padding-top: 30px;
@@ -37,27 +37,35 @@
 .logo {
   display: flex;
   column-gap: 17px;
-  flex-grow: 1;
+  margin-right: auto;
   align-items: center;
   color: $purpleColor;
 
   &__title {
-    font-family: Lato;
+    font-family: $latoFont;
     font-weight: bold;
     font-size: rem(24);
     line-height: 16px;
     text-transform: uppercase;
+  }
+  &__img-hover {
+    display: none;
   }
 }
 
 .menu {
   @include flex();
   column-gap: 48px;
+  @media (max-width: 536px) {
+    justify-content: space-between;
+    column-gap: unset;
+  }
 
   &__item {
     color: $purpleColor;
     font-weight: bold;
     line-height: 17px;
+    transition: all .3s;
   }
 }
 
@@ -74,6 +82,8 @@
   line-height: 17px;
   width: 145px;
   text-align: center;
+  cursor: pointer;
+  transition: all .3s;
 
   &--download {
     position: absolute;
@@ -87,6 +97,22 @@
   }
 }
 
+.header a:hover {
+  color: $whiteColor;
+}
+
+.header .logo:hover .logo__img {
+  display: none;
+}
+.header .logo:hover .logo__img-hover {
+  display: block;
+}
+
+.header .button:hover {
+  background-color: $whiteColor;
+  color: $purpleColor;
+}
+
 @media (max-width: 992px) {
   .header.container {
     background-clip: content-box;
@@ -95,6 +121,9 @@
   .top-menu {
     row-gap: 22px;
     background: #27262A;
+  }
+  .logo {
+    flex-grow: 0;
   }
   .menu {
     order: 1;
@@ -121,6 +150,7 @@
 @media (max-width: 480px) {
   .top-menu {
     padding-bottom: 30px;
+    justify-content: space-between;
   }
   .menu {
     display: none;
@@ -132,7 +162,7 @@
     align-items: end;
   }
   .logo {
-    flex-grow: 0;
+    margin-right: unset;
 
     &__title {
       display: none;
