@@ -25,6 +25,15 @@
     text-transform: uppercase;
     color: $greyColor;
   }
+
+  &__trial-text {
+    position: absolute;
+    bottom: -62px;
+    transform: translate(-50%, 50%);
+    font-size: rem(14);
+    line-height: rem(15);
+    color: #848E97;
+  }
 }
 
 .top-menu {
