@@ -9,7 +9,6 @@ import imagemin from 'gulp-imagemin';
 import uglify from 'gulp-uglify';
 import rename from 'gulp-rename'
 import cleanCSS from 'gulp-clean-css'
-import minifyjs from 'gulp-js-minify'
 
 const sass = gulpSass(dartSass);
 browserSync.create();
@@ -48,7 +47,6 @@ const buildJs = () =>
     .src(path.src.js)
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
-    .pipe(minifyjs())
     .pipe(gulp.dest(path.dist.js))
     .pipe(browserSync.stream());
 
