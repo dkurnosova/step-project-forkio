@@ -1,11 +1,6 @@
 const menu = document.querySelector('.menu')
-const menuItems = document.querySelectorAll('.menu__item')
 const burger = document.querySelector('.burger')
 const burgerItems = document.querySelectorAll('.burger svg')
-const menuActive = document.createElement('img')
-
-menuActive.setAttribute('src', 'dist/img/menu-active.png')
-menuActive.style.cssText = 'position: absolute; left: 0; top: 19px'
 
 burger.addEventListener('click', function () {
     menu.classList.toggle('active');
@@ -26,13 +21,3 @@ burger.addEventListener('click', function () {
         })
     }
 })
-
-menuItems.forEach(el => el.addEventListener('focusin', function () {
-    el.style.color = '#8D81AC'
-    el.append(menuActive)
-}))
-
-menuItems.forEach(el => el.addEventListener('focusout', function () {
-    el.style.color = '#fff'
-    menuActive.remove()
-}))
