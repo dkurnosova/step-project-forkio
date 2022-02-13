@@ -1,0 +1,141 @@
+.what-you-get-section{
+    background-color: #F4F4F4;
+    padding-left: rem(10);
+    display: grid;
+    grid-template-areas: 
+        "article title"
+        "article img";
+    grid-template-columns: minmax(100px, 540px) 50%;
+    column-gap: rem(49);
+    justify-content: end;
+
+    &__title{
+        grid-area: title;
+        font-size: rem(48);
+        line-height: rem(50);
+        font-weight: bold;
+        color: #8D81AC;
+        margin: rem(94) rem(10) rem(19) 0;
+        padding-left: rem(25);
+    }
+
+    &__img{
+        grid-area: img;
+        width: 100%;
+        display: block;
+        margin-bottom: rem(33);
+    }
+
+}
+
+.article-wrapper{
+    grid-area: article;
+    padding-top: rem(100);
+    padding-bottom: rem(69);
+    @include flex;
+    flex-direction: column;
+    gap: rem(33);
+
+    article{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        justify-content: space-between;
+
+        img{
+            max-width: 100%;
+        }
+
+        div{
+            h4{
+                font-size: rem(16);
+                line-height: rem(21);
+                color: #323232;
+                margin-bottom: rem(16);
+            }
+
+            p{
+                font-size: rem(14);
+                line-height: rem(21);
+                color: #848E97;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .what-you-get-section{
+        background-color: #fff;
+        padding-left: 0;
+        @include flex;
+        flex-direction: column;
+
+        &__title{
+            font-size: rem(42);
+            line-height: rem(44);
+            margin: rem(62) 10px rem(52);
+            padding-left: 0;
+            text-align: center;
+        }
+
+        &__img{
+            margin-left: 10px;
+            display: block;
+            margin: 0 0 0 rem(68);
+            order: 3;
+        }
+
+    }
+
+    .article-wrapper{
+        padding: 0 10px rem(73);
+        gap: rem(59);
+        max-width: rem(733);
+
+        article{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .what-you-get-section{
+        &__title{
+            font-size: rem(32);
+            line-height: rem(38);
+            margin: rem(32) rem(47) rem(36) rem(43);
+        }
+
+        &__img{
+            content: url(../../../dist/img/what-you-get-code-mob.png);
+            margin: 0 0 rem(6) rem(3);
+        }
+
+    }
+
+    .article-wrapper{
+        padding-inline: rem(21);
+        padding-bottom: rem(58);
+        gap: rem(37);
+
+        article{
+            @include flex;
+            flex-direction: column;
+            gap: rem(23);
+
+            div{
+                h4{
+                    line-height: rem(16);
+                    margin-bottom: rem(14);
+                    text-align: center;
+                }
+
+                p{
+                    font-family: $latoFont;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
