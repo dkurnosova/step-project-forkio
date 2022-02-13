@@ -39,6 +39,7 @@
     article{
         display: grid;
         grid-template-columns: 25% 75%;
+        column-gap: rem(23);
         justify-content: space-between;
 
         img{
@@ -94,7 +95,6 @@
         article{
             display: grid;
             grid-template-columns: 20% 80%;
-            justify-content: space-between;
         }
     }
 }

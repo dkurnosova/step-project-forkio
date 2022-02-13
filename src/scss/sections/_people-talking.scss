@@ -1,5 +1,5 @@
 .people-section {
-  background: url(../img/testmonials.png) no-repeat center / cover;
+  background:  url(../img/testmonials.png) no-repeat center / cover, #4B3B4E;
 
   &__title {
     padding-top: 108px;
@@ -36,8 +36,8 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   column-gap: 87px;
-  row-gap: 116px;
-  margin-block: 82px 108px;
+  row-gap: 111px;
+  margin-block: 75px 114px;
 }
 
 .item {
@@ -53,9 +53,6 @@
   text-align: center;
   color: #FFFFFF;
 
-  &__text {
-    margin-top: 10px;
-  }
 }
 
 @media (max-width: 992px) {

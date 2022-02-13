@@ -1,5 +1,4 @@
 # Step Project "Forkio"
-mobile first
 
 #### Technologies:
 - *Javascript Vanilla*
