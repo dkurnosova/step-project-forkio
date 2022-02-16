@@ -1,0 +1,214 @@
+.prices-section{
+    background-image: url(../../../dist/img/prices-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+    padding-inline: 10px;
+    padding-bottom: rem(73);
+
+    &__title {
+        padding-top: rem(129);
+        color: #FFFFFF;
+        font-size: rem(48);
+        line-height: rem(50);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: rem(61);
+    }
+
+    &__wrapper{
+        max-width: rem(1114);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 27% 1fr;
+        column-gap: rem(15);
+        align-items: center;
+    }
+}
+
+.tariff-plan{
+    background-color: rgba(255, 255, 255, 0.11);
+    color: #FFFFFF;
+
+    
+        h3{
+            background-color: rgba(255, 255, 255, 0.06);
+            text-align: center;
+            width: 100%;
+            padding-block: rem(36);
+            font-size: rem(24);
+            text-transform: uppercase;
+        }
+    
+        &__wrap{
+            @include flex(space-between);
+            flex-direction: column;
+            height: rem(360);
+            position: relative;
+            padding-top: rem(30);
+            padding-bottom: rem(37);
+
+            div{
+                h4{
+                    font-size: rem(60);
+                    line-height: rem(90);
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-bottom: rem(20);
+                    
+                    span{
+                        font-weight: 700;
+                    }
+                }
+
+
+                p{
+                font-size: rem(14);
+                line-height: rem(16);
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: rem(38);
+
+                }   
+
+                hr{
+                    width: 60px;
+                    height: 5px;
+                    background-color: #8D81AC;
+                    border: none;
+                    margin: 0 auto;
+                }
+            }
+
+            &__text{
+                font-size: rem(16);
+                line-height: rem(18);
+                text-align: center;
+            }
+        }
+
+
+
+    &--main{
+        background-color: rgba(70, 48, 72, 0.84);
+
+        h3{
+            background-color: rgba(0, 0, 0, 0.11);
+            padding-block: rem(43);
+        }
+
+        &__wrap{
+            height: rem(449);
+            padding-top: rem(14);
+            padding-bottom: rem(47);
+
+            div{
+                h4{
+                    font-size: rem(82);
+                    line-height: rem(90);
+                    margin-bottom: rem(16);
+                }
+
+                p{
+                    margin-bottom: rem(46);
+                }   
+            }
+        }
+    }
+
+}
+
+ .btn-purchase{
+    background-color: rgba(255, 255, 255, 0.15);
+    font-size: rem(15);
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: rem(15.5) rem(38) rem(14.5) rem(37);
+    border-radius: 19px;
+
+    &--main{
+        font-size: rem(16);
+        line-height: rem(18);
+        padding: rem(18.5) rem(48);
+        border-radius: 24px;
+        margin-top: rem(43);
+    }
+}
+
+@media (max-width: 992px){
+    .prices-section{
+        padding-bottom: rem(94);
+
+        &__title {
+            padding-top: rem(98);
+            font-size: rem(42);
+            line-height: rem(44);
+            margin-bottom: rem(39);
+        }
+
+        &__wrapper{
+            max-width: rem(623);
+            display: grid;
+            grid-template-columns: repeat(2, minmax(100px, 299px));
+            column-gap: rem(25);
+            row-gap: rem(30);
+        }
+    }
+
+    .tariff-plan{
+        width: 86%;
+        
+        &--first{
+            margin: 0 0 0 auto;
+        }
+
+        &--main{
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .prices-section{  
+        padding-bottom: rem(12);
+
+        &__title {
+            padding-top: rem(23);
+            font-size: rem(28);
+            line-height: rem(42);
+            margin-bottom: rem(32);
+        }
+
+        &__wrapper{
+            max-width: rem(299);
+            grid-template-columns: 1fr;
+            row-gap: rem(18);
+            justify-items: center;
+        }
+    }
+
+    .tariff-plan{   
+        &__wrap{
+            div{
+                h4{
+                    line-height: rem(62);
+                }
+            }
+        }
+
+        &--first{
+            margin: 0 auto;
+        }
+
+        &--main{
+            &__wrap{
+                div{
+                    h4{
+                        line-height: rem(84);
+                    }
+                }
+            }
+        }
+
+    }
+}
