@@ -38,7 +38,7 @@
 
     article{
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 25% 1fr;
         column-gap: rem(23);
         justify-content: space-between;
 
@@ -79,9 +79,9 @@
         }
 
         &__img{
-            margin-left: 10px;
+            width: 91%;
             display: block;
-            margin: 0 0 0 rem(68);
+            margin: 0 0 0 auto;
             order: 3;
         }
 
@@ -94,7 +94,7 @@
 
         article{
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 20% 1fr;
         }
     }
 }
@@ -109,7 +109,8 @@
 
         &__img{
             content: url(../img/what-you-get-code-mob.png);
-            margin: 0 0 rem(6) rem(3);
+            margin-bottom: rem(6);
+            width: 99%;
         }
 
     }
