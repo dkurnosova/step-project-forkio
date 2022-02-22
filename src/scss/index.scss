@@ -23,9 +23,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding-inline: 10px;
-    @media (max-width: 480px) {
-        min-width: 320px;
-    }
 }
 
 
